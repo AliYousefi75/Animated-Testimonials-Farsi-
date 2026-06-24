@@ -50,3 +50,32 @@ body{
     width: 5rem;
     background-color: var(--primary-color);
 }
+
+.cards-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
+}
+.card{
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    padding: 5rem 2rem 5rem;
+    background-color: var(--white);
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+.card::before{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    transform: translate(-50% ,-50%);
+    width: 75%;
+    background-color: var(--primary-color);
+    border-radius: 100%;
+    aspect-ratio: 1;
+    z-index: -1;
+    transition: 0.5s;
+}
