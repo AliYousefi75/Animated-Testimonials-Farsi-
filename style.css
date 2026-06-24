@@ -120,3 +120,17 @@ body{
     color: var(--text-light);
     transition: 0.3s;
 }
+
+.card:hover::before{
+    width: 400%;
+}
+
+.card:hover :is(h4,h5){
+    color: var(--white);
+}
+.card:hover :is(p,h6){
+    color: var(--secondary-color);
+}
+.card:hover img{
+    border-color: var(--white);
+}
